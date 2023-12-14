@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes or No</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #c38ba7; /* Pink for the future */
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #eb3bb0; /* White text on pink background for better contrast */
+        }
+
+        #noOption {
+            background-color: rgba(241, 10, 241, 0.8); /* Pink color with 80% opacity */
+            color:black;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        #noOption:hover {
+            opacity: 0; /* Hide the button on hover */
+        }
+
+        .accept{
+
+        }
+    </style>
+</head>
+<body>
+    <div class="accept">
+        <p style="font-weight: bolder; font-size: larger;"><i> accept chey please ?? </i></p>
+    </div>
+    <div>
+        <button id="yesOption">Yes</button>
+        <button id="noOption" onmouseover="hideNoOption()" onmouseout="showNoOption()">No</button>
+    </div>
+
+    <script>
+        function hideNoOption() {
+            document.getElementById('noOption').style.display = 'none';
+        }
+
+        function showNoOption() {
+            document.getElementById('noOption').style.display = 'inline';
+        }
+    </script>
+</body>
+</html>
